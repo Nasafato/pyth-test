@@ -134,6 +134,7 @@ fn print_price_info(price_account: &Price) {
  */
 fn get_attr_str<'a, T>(iterator: &mut T) -> String
 where
+    // Do I understand the point of these lifetime parameters yet? The answer is definitively "no".
     T: Iterator<Item = &'a u8>,
 {
     // So the length is the first element of the section, u8 int.
